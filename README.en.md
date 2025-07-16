@@ -10,45 +10,41 @@
 
 # ROS2 Package for Interactive Cleanup
 
-<!-- 目次 -->
 <details>
-  <summary>目次</summary>
+  <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#概要">概要</a>
+      <a href="#introduction">Introduction</a>
     </li>
     <li>
-      <a href="#セットアップ">セットアップ</a>
+      <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#環境条件">環境条件</a></li>
-        <li><a href="#インストール方法">インストール方法</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#実行操作方法">実行・操作方法</a></li>
-    <li><a href="#マイルストーン">マイルストーン</a></li>
-    <!-- <li><a href="#contributing">Contributing</a></li> -->
-    <li><a href="#ライセンス">ライセンス</a></li>
-    <li><a href="#参考文献">参考文献</a></li>
+    <li><a href="#launch-and-usage">Launch and Usage</a></li>
+    <li><a href="#milestones">Milestones</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#references">References</a></li>
   </ol>
 </details>
 
-<!-- レポジトリの概要 -->
-## 概要
+## Introduction
 
-このプロジェクトは，RoboCup@Home シミュレーションの Interactive Cleanup タスク用の ROS2 パッケージです．
+This project is a ROS2 package for the RoboCup@Home Simulation's Interactive Cleanup task.
 
-<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- セットアップ -->
-## セットアップ
+## Getting Started
 
-ここで，本レポジトリのセットアップ方法について説明します．
+This section explains how to set up this repository.
 
-<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 環境条件
+### Prerequisites
 
-正常動作のため，以下の必要な環境を整えてください．
+To ensure proper operation, please set up the following required environment:
 
 | System  | Version |
 | ------------- | ------------- |
@@ -56,21 +52,21 @@
 | ROS | Humble Hawksbill |
 | Python | 3.10 |
 
-[HSR Sim Common](https://github.com/TeamSOBITS/hsr_sim_common)パッケージをインストールしていない場合はインストールしてください．
+If you have not installed the [HSR Sim Common](https://github.com/TeamSOBITS/hsr_sim_common) package, please install it.
 
-<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### インストール方法
+### Installation
 
-1. ROSの`src`フォルダに移動します．
+1. Navigate to your ROS `src` folder.
    ```sh
    cd ~/colcon_ws/src/
    ```
-2. 本レポジトリをcloneします．
+2. Clone this repository.
    ```sh
    git clone -b humble-devel https://github.com/TeamSOBITS/interactive-cleanup-ros.git
    ```
-3. パッケージをコンパイルします．
+3. Compile the package.
    ```sh
    cd ~/colcon_ws/
    ```
@@ -81,49 +77,56 @@
    source ~/colcon_ws/install/setup.sh
    ```
 
-<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- 実行・操作方法 -->
-## 実行・操作方法
+---
 
-これは，Interactive Cleanup アプリケーションと通信するシンプルな ROS2 ノードです．
+## Launch and Usage
+
+This is a simple ROS2 node that communicates with the Interactive Cleanup application.
 
   ```sh:
   ros2 launch interactive_cleanup_ros sample.launch.py
-  ```
+  ````
 
-### 遠隔操作ツールの実行方法
+### How to Run the Teleoperation Tool
 
-HSR をキーボード操作で操作できます．
-デバッグ用です．
+
+You can control the HSR robot using keyboard input. This is for debugging purposes.
 
   ```sh:
   ros2 launch interactive_cleanup_ros teleop_key.launch.py
   ```
 
-## ライセンス
+-----
 
-このプロジェクトは SIGVerse ライセンスに基づいてライセンスされています．詳細については，LICENSE.txt ファイルを参照してください．
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+This project is licensed under the SIGVerse License. See the `LICENSE.txt` file for details.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+-----
 
 
- <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+## Milestones
 
-<!-- マイルストーン -->
-## マイルストーン
+Please check the [Issue page](https://www.google.com/search?q=issues-url) to see current bugs and new feature requests.
 
-現時点のバッグや新規機能の依頼を確認するために[Issueページ](issues-url) をご覧ください．
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+-----
 
-<!-- 参考文献 -->
-## 参考文献
+## References
 * [interactive-cleanup-ros](https://github.com/RoboCupatHomeSim/interactive-cleanup-ros)
 * [OS and ROS2 version](https://github.com/RoboCupatHomeSim/documents/blob/master/SoftwareManual/Environment.md#ubuntu-pc)
 * [rosbridge_suite](http://wiki.ros.org/rosbridge_suite)
 * [sigverse_ros_bridge](https://github.com/SIGVerse/sigverse_ros_package)
 * [wiki page](https://github.com/RoboCupatHomeSim/interactive-cleanup-ros/wiki).
 
-<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
